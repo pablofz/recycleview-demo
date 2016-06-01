@@ -5,10 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import pablofz.com.recycleviewdemo.ExampleDataCreator;
+import pablofz.com.recycleviewdemo.util.ExampleDataCreator;
 import pablofz.com.recycleviewdemo.R;
 import pablofz.com.recycleviewdemo.adapter.RecycleViewAdapter;
 

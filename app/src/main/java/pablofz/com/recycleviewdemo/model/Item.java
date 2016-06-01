@@ -1,4 +1,4 @@
-package pablofz.com.recycleviewdemo;
+package pablofz.com.recycleviewdemo.model;
 
 /**
  * Created by pablofe-ot on 6/1/16.

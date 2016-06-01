@@ -1,11 +1,14 @@
 package pablofz.com.recycleviewdemo.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
 
-import pablofz.com.recycleviewdemo.Item;
+import pablofz.com.recycleviewdemo.model.Item;
+import pablofz.com.recycleviewdemo.R;
 import pablofz.com.recycleviewdemo.viewholder.RecycleViewHolder;
 
 /**
@@ -22,12 +25,17 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewHolder> 
 
     @Override
     public RecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.list_row, parent, false);
+
+        return new RecycleViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(RecycleViewHolder holder, int position) {
-
+        Item item = dataset.get(position);
+        holder.setTitleText(item.getTitle());
+        holder.setSubtitleText(item.getSubititle());
     }
 
     @Override
